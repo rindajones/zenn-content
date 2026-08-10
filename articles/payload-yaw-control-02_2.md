@@ -20,8 +20,8 @@ published: false
 本シリーズでは、以下の流れで開発を紹介しています。
 
 [#01 制御環境を構築する](https://zenn.dev/rindajones/articles/a8b6189171848f)
-#02-1 強化学習の環境を構築する  
-**#02-2 強化学習による制御モデルを学習する**  
+[#02-1 強化学習の環境を構築する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_1)
+**#02-2 強化学習による制御モデルを学習する  ← 今回**
 #03 カメラ画像からYaw角を推定する  
 #04 Raspberry Piで画像ベース制御を実証する
 
@@ -296,7 +296,7 @@ SACによる制御では約40秒で目標Yaw角90°へ到達し、
 本シリーズでは、吊り荷Yaw制御システムの開発過程を段階的に紹介します。
 
 - [#01 制御環境を構築する](https://zenn.dev/rindajones/articles/a8b6189171848f)
-- #02-1 強化学習の環境を構築する
+- [##02-1 強化学習の環境を構築する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_1)
 - **#02-2 強化学習による制御モデルを学習する ← 今回**
 - #03 カメラ画像からYaw角を推定する
 - #04 Raspberry Piで画像ベース制御を実証する
