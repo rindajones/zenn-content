@@ -3,7 +3,7 @@ title: "吊り荷Yaw制御システムの開発 #02-1：強化学習の環境を
 emoji: "🏗️"
 type: "tech"
 topics: ["python", "pybullet", "強化学習", "simulation"]
-published: Trus
+published: True
 ---
 
 ## はじめに
