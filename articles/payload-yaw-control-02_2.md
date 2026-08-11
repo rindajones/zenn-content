@@ -287,7 +287,8 @@ HSteel、Plate、Trussの各条件での制御結果は、[GitHub Pages](https:/
 - #03 カメラ画像からYaw角を推定する
 - #04 Raspberry Piで画像ベース制御を実証する
 
+
 ## 関連リンク
 
 プロジェクト全体は GitHub Pages で公開しています。
-→ [Image-based Payload Yaw Control](https://rindajones.github.io/payload-yaw-control/ja/)
+@[card](https://rindajones.github.io/payload-yaw-control/ja/)

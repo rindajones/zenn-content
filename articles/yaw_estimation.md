@@ -10,9 +10,14 @@ published: false
 
 [前回](https://zenn.dev/rindajones/articles/payload-yaw-control-02_2)までに、強化学習環境を用いて制御モデルを構築しました。
 
-今回は、制御に必要な吊り荷のYaw角をカメラ画像から推定します。
+今回のYaw角推定では、カメラ画像からYaw角を直接推定するのではなく、まず物体検出モデルで吊り荷のフックを検出します。検出したフックの位置関係から画像処理によって吊り荷の向きを求め、Yaw角を算出します。
 
-Blenderで生成した画像を使って物体検出モデルを学習し、検出した特徴点から吊り荷のYaw角を算出します。3種類の吊り荷について推定を行い、制御中の画像を含めて推定精度を評価します。
+つまり、Yaw角推定は次の2段階で行います。
+
+1. **物体検出：画像から吊り荷のフックを検出する**
+2. **画像処理：検出したフックの位置関係からYaw角を算出する**
+
+Blenderで生成した画像を使ってフック検出モデルを学習し、3種類の吊り荷について、制御中の画像を含めてYaw角の推定精度を評価します。
 
 ![](/images/payload-yaw-control/development-flow.png)
 
@@ -62,20 +67,28 @@ Yaw角推定モデルの学習および評価には、以下の環境を使用�
 CSVに保存された吊り荷やスラスター機体の位置・姿勢をBlenderへ読み込み、シミュレーション結果をアニメーションとして再現します。
 
 主に以下のスクリプトを使用します。
+なお、`rope_attach.py` と `move.py` については、[#01のBlender Pythonスクリプト](https://zenn.dev/rindajones/articles/a8b6189171848f#blender-pythonスクリプト)で説明しています。
 
 - `rope_attach.py`：ロープの接続と追従
 - `move.py`：CSVから位置・姿勢を読み込み、Blender上のオブジェクトを動かす
-- `data_gen.py`：各フレームから学習画像とラベルを生成する
 
-`move.py` では、使用する吊り荷と制御結果CSVを指定します。
+### 学習画像とラベルの生成
 
-（コード例）
+ `data_gen.py` で、生成する吊り荷と外乱条件、出力先を指定します。
 
-続いて `data_gen.py` で、生成する吊り荷と外乱条件、出力先を指定します。
+```python
+OBJ_TYPE = "truss"   # "hsteel", "plate", "truss"
+XY = "X1Y1"
 
-（コード例）
+OUT_DIR_A = OUT_DIR / "baseline"   # "baseline" or "auto"
 
-Blender上でこれらのスクリプトを実行し、各条件の画像とラベルを作成します。
+OUT_DIR_B = OUT_DIR_A / OBJ_TYPE
+OUT_DIR_C = OUT_DIR_B / XY
+
+IMG_DIR = OUT_DIR_C / "images"
+LABEL_CSV = OUT_DIR_C / "labels.csv"
+```
+OBJ_TYPE で吊り荷、XY で外乱条件、OUT_DIR_A で制御あり／制御なしを指定します。生成した画像は images/、教師情報は labels.csv に保存します。
 
 ```
 datasets/raw/
@@ -96,7 +109,23 @@ auto/
         ├── images/
         └── labels.csv
 ```
-labels.csv には画像生成時の物体位置などの教師情報を保存します。また、シミュレーション上のYaw角は後の推定精度評価でGround Truthとして使用します。
+
+`labels.csv` には、画像生成時の検出対象の位置情報とシミュレーション上のYaw角などを保存します。
+検出対象の位置情報は物体検出モデルの学習に使用し、Yaw角は後の推定精度評価でGround Truthとして使用します。
+
+### カメラ画像と検出対象
+
+カメラはスラスター機体の下部に設置し、吊り荷を上方から撮影します。
+
+![](/images/payload-yaw-control/03/camera.png)
+
+
+カメラ画像では、吊り荷を支持するフックを物体検出の対象とします。
+
+![](/images/payload-yaw-control/03/payloads.png)
+
+H鋼では2点、平板とトラスでは4点のフックを検出します。
+これらのフックの位置関係を、後段のYaw角算出に使用します。
 
 ## 物体検出モデルの学習
 
