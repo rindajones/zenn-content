@@ -8,10 +8,9 @@ published: True
 
 ## はじめに
 
-前回は、BlenderとPyBulletを用いて、吊り荷Yaw制御を検証するためのシミュレーション環境を構築しました。
+[前回](https://zenn.dev/rindajones/articles/a8b6189171848f)は、BlenderとPyBulletを用いて、吊り荷Yaw制御を検証するためのシミュレーション環境を構築しました。
 
-今回は、この環境を強化学習の制御環境として構成します。
-吊り荷のYaw角を制御するための観測値、Action、Reward、成功条件を定義し、SACによる学習を実行できる環境を構築します。
+今回は、この環境を強化学習の制御環境として構成します。吊り荷のYaw角を制御するための観測値、`Action`、`Reward`、`成功条件`を定義し、SACによる学習を実行できる環境を構築します。
 
 強化学習で何を観測し、どのような操作を行い、その結果をどう評価するかという、制御環境の設計を実際の開発の流れに沿って紹介します。
 
@@ -21,7 +20,7 @@ published: True
 
 [#01 制御環境を構築する](https://zenn.dev/rindajones/articles/a8b6189171848f)
 **#02-1 強化学習の環境を構築する ← 今回**
-#02-2 強化学習による制御モデルを学習する  
+[#02-2 強化学習による制御モデルを学習する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_2)
 #03 カメラ画像からYaw角を推定する  
 #04 Raspberry Piで画像ベース制御を実証する
 
@@ -346,7 +345,7 @@ def _is_success(self):
 
 - [#01 制御環境を構築する](https://zenn.dev/rindajones/articles/a8b6189171848f)
 - **#02-1 強化学習の環境を構築する ← 今回**
-- #02-2 強化学習による制御モデルを学習する
+- [#02-2 強化学習による制御モデルを学習する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_2)
 - #03 カメラ画像からYaw角を推定する
 - #04 Raspberry Piで画像ベース制御を実証する
 
