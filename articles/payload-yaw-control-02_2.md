@@ -21,7 +21,7 @@ published: true
 [#01 制御環境を構築する](https://zenn.dev/rindajones/articles/a8b6189171848f)
 [#02-1 強化学習の環境を構築する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_1)
 **#02-2 強化学習による制御モデルを学習する  ← 今回**
-#03 カメラ画像からYaw角を推定する  
+[#03 カメラ画像からYaw角を推定する](https://zenn.dev/rindajones/articles/yaw_estimation)
 #04 Raspberry Piで画像ベース制御を実証する
 
 
@@ -284,7 +284,7 @@ HSteel、Plate、Trussの各条件での制御結果は、[GitHub Pages](https:/
 - [#01 制御環境を構築する](https://zenn.dev/rindajones/articles/a8b6189171848f)
 - [#02-1 強化学習の環境を構築する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_1)
 - **#02-2 強化学習による制御モデルを学習する ← 今回**
-- #03 カメラ画像からYaw角を推定する
+- [#03 カメラ画像からYaw角を推定する](https://zenn.dev/rindajones/articles/yaw_estimation)
 - #04 Raspberry Piで画像ベース制御を実証する
 
 
