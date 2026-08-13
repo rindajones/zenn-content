@@ -27,7 +27,9 @@ Blenderで生成した画像を使ってフック検出モデルを学習し、3
 [#02-1 強化学習の環境を構築する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_1)
 [#02-2 強化学習による制御モデルを学習する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_2)
 **#03 カメラ画像からYaw角を推定する ← 今回**
-#04 Raspberry Piで画像ベース制御を実証する
+[#04 Raspberry Piで画像ベース制御を実証する](https://zenn.dev/rindajones/articles/raspberry_pi)
+#05 低出力・可変目標Yaw制御
+
 
 ## 開発環境
 
@@ -296,7 +298,8 @@ yaw_err_deg = abs(
 - [#02-1 強化学習の環境を構築する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_1)
 - [#02-2 強化学習による制御モデルを学習する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_2)
 - **#03 カメラ画像からYaw角を推定する ← 今回**
-- #04 Raspberry Piで画像ベース制御を実証する
+- [#04 Raspberry Piで画像ベース制御を実証する](https://zenn.dev/rindajones/articles/raspberry_pi)
+#05 低出力・可変目標Yaw制御
 
 
 ## 関連リンク
