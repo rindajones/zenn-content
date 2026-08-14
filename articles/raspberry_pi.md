@@ -20,9 +20,11 @@ published: true
 [#03 カメラ画像からYaw角を推定する](https://zenn.dev/rindajones/articles/yaw_estimation)
 **#04 Raspberry Piで画像ベース制御を実証する ← 今回**
 [#05 可変目標Yaw制御を目指す](https://zenn.dev/rindajones/articles/variable-target-yaw-control/)
-#06：可変目標Yaw制御の環境と学習
-#07：3種類の吊り荷で可変目標Yaw制御を試す
-#08：可変目標Yaw制御の結果と課題
+[#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
+#06-2 可変目標Yaw制御モデルを学習する
+#07 3種類の吊り荷で可変目標Yaw制御を試す  
+#08 可変目標Yaw制御の結果と課題
+
 
 ## Yaw推定モデルのONNX変換
 
@@ -347,10 +349,11 @@ Ubuntu側で行うBlenderの画像生成や物理シミュレーションの処�
 - [#02-2 強化学習による制御モデルを学習する](https://zenn.dev/rindajones/articles/payload-yaw-control-02_2)
 - [#03 カメラ画像からYaw角を推定する](https://zenn.dev/rindajones/articles/yaw_estimation)
 - **#04 Raspberry Piで画像ベース制御を実証する ← 今回**
-- #05 可変目標Yaw制御を目指す
-- #06：可変目標Yaw制御の環境と学習
-- #07：3種類の吊り荷で可変目標Yaw制御を試す
-- #08：可変目標Yaw制御の結果と課題
+- [#05 可変目標Yaw制御を目指す](https://zenn.dev/rindajones/articles/variable-target-yaw-control)
+- [#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
+- #06-2 可変目標Yaw制御モデルを学習する
+- #07 3種類の吊り荷で可変目標Yaw制御を試す
+- #08 可変目標Yaw制御の結果と課題
 
 
 ## 関連リンク
