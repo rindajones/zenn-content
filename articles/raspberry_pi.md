@@ -21,7 +21,7 @@ published: true
 **#04 Raspberry Piで画像ベース制御を実証する ← 今回**
 [#05 可変目標Yaw制御を目指す](https://zenn.dev/rindajones/articles/variable-target-yaw-control/)
 [#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
-#06-2 可変目標Yaw制御モデルを学習する
+[#06-2 可変目標Yaw制御モデルを学習する](https://zenn.dev/rindajones/articles/variable-target-training)
 #07 3種類の吊り荷で可変目標Yaw制御を試す  
 #08 可変目標Yaw制御の結果と課題
 
@@ -351,7 +351,7 @@ Ubuntu側で行うBlenderの画像生成や物理シミュレーションの処�
 - **#04 Raspberry Piで画像ベース制御を実証する ← 今回**
 - [#05 可変目標Yaw制御を目指す](https://zenn.dev/rindajones/articles/variable-target-yaw-control)
 - [#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
-- #06-2 可変目標Yaw制御モデルを学習する
+- [#06-2 可変目標Yaw制御モデルを学習する](https://zenn.dev/rindajones/articles/variable-target-training)
 - #07 3種類の吊り荷で可変目標Yaw制御を試す
 - #08 可変目標Yaw制御の結果と課題
 
