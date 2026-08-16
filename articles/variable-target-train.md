@@ -3,7 +3,7 @@ title: "吊り荷Yaw制御システムの開発 #06-2：可変目標Yaw制御モ
 emoji: "🎯"
 type: "tech"
 topics: ["強化学習", "python", "simulation", "robotics"]
-published: false
+published: true
 ---
 
 # はじめに
