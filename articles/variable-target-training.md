@@ -57,7 +57,8 @@ published: false
 [#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
 **#06-2 可変目標Yaw制御モデルを学習する ← 今回**
 [#07 3種類の吊り荷で可変目標Yaw制御を試す](https://zenn.dev/rindajones/articles/variable-target-infer)
-#08 可変目標Yaw制御の結果
+[#08 可変目標Yaw制御の結果](https://zenn.dev/rindajones/articles/variable-target-summary)
+
 
 # 最初はカリキュラム学習を試した
 
@@ -547,7 +548,8 @@ act_abs          = 0.048
 - [#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
 - **#06-2 可変目標Yaw制御モデルを学習する ← 今回**
 - [#07 3種類の吊り荷で可変目標Yaw制御を試す](https://zenn.dev/rindajones/articles/variable-target-infer)
-- #08 可変目標Yaw制御の結果
+- [#08 可変目標Yaw制御の結果](https://zenn.dev/rindajones/articles/variable-target-summary)
+
 
 
 ## 関連リンク

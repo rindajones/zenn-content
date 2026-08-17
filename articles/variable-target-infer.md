@@ -48,7 +48,7 @@ Truss
 [#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
 [#06-2 可変目標Yaw制御モデルを学習する](https://zenn.dev/rindajones/articles/variable-target-training)
 **#07 3種類の吊り荷で可変目標Yaw制御を試す ← 今回**
-#08 可変目標Yaw制御の結果
+[#08 可変目標Yaw制御の結果](https://zenn.dev/rindajones/articles/variable-target-summary)
 
 # 3種類の吊り荷
 
@@ -389,7 +389,8 @@ Truss  : 比較的大きな出力を継続して使用
 - [#06-1 可変目標Yaw制御の環境を構築する](https://zenn.dev/rindajones/articles/variable-target-env)
 - [#06-2 可変目標Yaw制御モデルを学習する](https://zenn.dev/rindajones/articles/variable-target-training)
 - **#07 3種類の吊り荷で可変目標Yaw制御を試す ← 今回**
-- #08 可変目標Yaw制御の結果
+- [#08 可変目標Yaw制御の結果](https://zenn.dev/rindajones/articles/variable-target-summary)
+
 
 ## 関連リンク
 
